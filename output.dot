@@ -1,0 +1,196 @@
+digraph cinclude2dot2 {
+  node[
+    shape="square"
+  ]
+  
+  rankdir=TB
+  
+  
+  
+  
+"boost/variant/get.hpp" [color="red",font="fixed"]
+  "IDataNode.h" -> "boost/variant/get.hpp"
+"memory" [color="red",font="fixed"]
+  "IDataNode.h" -> "memory"
+  "Native_Procedure.h" -> "IProcedure.h"
+  "Native_Procedure.h" -> "IEnvironment.h"
+"EvaluatorStrategies.h" [color="blue",font="fixed"]
+  "Native_Procedure.h" -> "EvaluatorStrategies.h"
+"Evaluator.h" [color="blue",font="fixed"]
+  "Native_Procedure.h" -> "Evaluator.h"
+"functional" [color="red",font="fixed"]
+  "Native_Procedure.h" -> "functional"
+"typeinfo" [color="red",font="fixed"]
+  "Native_Procedure.h" -> "typeinfo"
+  "Environment.h" -> "stdlib.h"
+  "Environment.h" -> "stdio.h"
+"iostream" [color="red",font="fixed"]
+  "Environment.h" -> "iostream"
+"map" [color="red",font="fixed"]
+  "Environment.h" -> "map"
+"string" [color="red",font="fixed"]
+  "Environment.h" -> "string"
+  "Environment.h" -> "memory"
+  "Environment.h" -> "IEnvironment.h"
+  "Environment.h" -> "IDataNode.h"
+"Eval_Variable.h" [color="blue",font="fixed"]
+  "Eval_Variable.h" -> "memory"
+"type_traits" [color="red",font="fixed"]
+  "Eval_Variable.h" -> "type_traits"
+  "Eval_Variable.h" -> "IEvaluatorStrategy.h"
+  "Eval_Variable.h" -> "Symbol.h"
+  "Eval_Variable.h" -> "IDataNode.h"
+  "Eval_Variable.h" -> "IEnvironment.h"
+  "Eval_Variable.h" -> "Symbol.h"
+  "Eval_Variable.h" -> "DataNode.h"
+"Eval_Expression.h" [color="blue",font="fixed"]
+  "Eval_Variable.h" -> "Eval_Expression.h"
+"EvaluatorStrategyDefinitions.h" [color="blue",font="fixed"]
+  "Eval_Variable.h" -> "EvaluatorStrategyDefinitions.h"
+"boost/flyweight.hpp" [color="red",font="fixed"]
+  "Symbol.h" -> "boost/flyweight.hpp"
+  "Symbol.h" -> "string"
+  "IEvaluatorStrategy.h" -> "DataNode.h"
+  "IEvaluatorStrategy.h" -> "Environment.h"
+"Eval_ProcedureBody_impl.h" [color="blue",font="fixed"]
+  "Eval_ProcedureBody_impl.h" -> "Data.h"
+  "Eval_ProcedureBody_impl.h" -> "Symbol.h"
+  "Eval_ProcedureBody_impl.h" -> "DataNode.h"
+  "Eval_ProcedureBody_impl.h" -> "EvaluatorStrategyDefinitions.h"
+  "Eval_ProcedureBody_impl.h" -> "Evaluator.h"
+  "Eval_ProcedureBody_impl.h" -> "IEvaluatorStrategy.h"
+  "Eval_ProcedureBody_impl.h" -> "Eval_Expression.h"
+"Eval_ProcedureBody.h" [color="blue",font="fixed"]
+  "Eval_ProcedureBody_impl.h" -> "Eval_ProcedureBody.h"
+"Eval_Expression_impl.h" [color="blue",font="fixed"]
+  "Eval_ProcedureBody_impl.h" -> "Eval_Expression_impl.h"
+"Eval_Quote.h" [color="blue",font="fixed"]
+  "Eval_Quote.h" -> "IEvaluatorStrategy.h"
+  "Eval_Quote.h" -> "Symbol.h"
+  "Eval_Quote.h" -> "DataNode.h"
+  "Eval_ProcedureBody.h" -> "Data.h"
+  "Eval_ProcedureBody.h" -> "Symbol.h"
+  "Eval_ProcedureBody.h" -> "DataNode.h"
+  "Eval_ProcedureBody.h" -> "EvaluatorStrategyDefinitions.h"
+  "Eval_ProcedureBody.h" -> "Evaluator.h"
+  "Eval_ProcedureBody.h" -> "IEvaluatorStrategy.h"
+"Eval_Define.h" [color="blue",font="fixed"]
+  "Eval_ProcedureBody.h" -> "Eval_Define.h"
+"main.cpp" [color="red",font="fixed"]
+  "main.cpp" -> "iostream"
+  "main.cpp" -> "Evaluator.h"
+  "main.cpp" -> "Procedure.h"
+  "main.cpp" -> "Eval_Expression_impl.h"
+  "main.cpp" -> "parser/Tokenizer.h"
+  "main.cpp" -> "Environment.h"
+  "main.cpp" -> "Symbol.h"
+"vector" [color="red",font="fixed"]
+  "Procedure.h" -> "vector"
+  "Procedure.h" -> "IDataNode.h"
+  "Procedure.h" -> "Environment.h"
+  "Procedure.h" -> "Evaluator.h"
+  "Procedure.h" -> "IProcedure.h"
+  "Procedure.h" -> "Eval_Expression.h"
+  "Procedure.h" -> "Eval_ProcedureBody.h"
+  "Procedure.h" -> "Eval_ProcedureBody_impl.h"
+"Eval_Variable_impl.h" [color="blue",font="fixed"]
+  "Eval_Variable_impl.h" -> "Eval_Variable.h"
+  "Eval_Variable_impl.h" -> "Evaluator.h"
+  "Eval_Variable_impl.h" -> "Eval_Expression_impl.h"
+  "Eval_Expression.h" -> "Data.h"
+  "Eval_Expression.h" -> "Symbol.h"
+  "Eval_Expression.h" -> "DataNode.h"
+  "Eval_Expression.h" -> "EvaluatorStrategyDefinitions.h"
+  "Eval_Expression.h" -> "Evaluator.h"
+  "Eval_Expression.h" -> "IEvaluatorStrategy.h"
+  "Eval_Expression.h" -> "Eval_Define.h"
+  "Eval_Expression.h" -> "Eval_Variable.h"
+  "Eval_Expression.h" -> "Eval_Quote.h"
+"stdexcept" [color="red",font="fixed"]
+  "Rational.h" -> "stdexcept"
+  "Rational.h" -> "Real.h"
+"cmath" [color="red",font="fixed"]
+  "Number.h" -> "cmath"
+  "Number.h" -> "Value.h"
+"boost/variant.hpp" [color="red",font="fixed"]
+  "Data.h" -> "boost/variant.hpp"
+  "Data.h" -> "Number.h"
+  "Data.h" -> "Symbol.h"
+  "Data.h" -> "ASCII_String.h"
+  "Eval_Expression_impl.h" -> "Data.h"
+  "Eval_Expression_impl.h" -> "Symbol.h"
+  "Eval_Expression_impl.h" -> "DataNode.h"
+  "Eval_Expression_impl.h" -> "EvaluatorStrategyDefinitions.h"
+  "Eval_Expression_impl.h" -> "Evaluator.h"
+  "Eval_Expression_impl.h" -> "IEvaluatorStrategy.h"
+  "Eval_Expression_impl.h" -> "Eval_Define.h"
+  "Eval_Expression_impl.h" -> "Eval_Variable.h"
+  "Eval_Expression_impl.h" -> "Eval_Quote.h"
+  "Eval_Expression_impl.h" -> "Eval_Expression.h"
+"Eval_PrintTree.h" [color="blue",font="fixed"]
+  "Eval_Expression_impl.h" -> "Eval_PrintTree.h"
+"Eval_Define_impl.h" [color="blue",font="fixed"]
+  "Eval_Expression_impl.h" -> "Eval_Define_impl.h"
+  "Eval_Expression_impl.h" -> "Eval_Variable_impl.h"
+  "Integer.h" -> "Rational.h"
+  "IProcedure.h" -> "memory"
+  "IProcedure.h" -> "vector"
+  "IProcedure.h" -> "IDataNode.h"
+  "DummyProcedure.h" -> "vector"
+  "DummyProcedure.h" -> "IProcedure.h"
+  "ASCII_String.h" -> "string"
+  "ASCII_String.h" -> "vector"
+  "ASCII_String.h" -> "iostream"
+  "ASCII_String.h" -> "ctype.h"
+  "Eval_PrintTree.h" -> "type_traits"
+  "Eval_PrintTree.h" -> "iostream"
+  "Eval_PrintTree.h" -> "IEvaluatorStrategy.h"
+  "Eval_PrintTree.h" -> "Symbol.h"
+  "Eval_PrintTree.h" -> "DataNode.h"
+  "Eval_PrintTree.h" -> "EvaluatorStrategyDefinitions.h"
+  "Eval_Define.h" -> "type_traits"
+  "Eval_Define.h" -> "IEvaluatorStrategy.h"
+  "Eval_Define.h" -> "IEnvironment.h"
+  "Eval_Define.h" -> "Symbol.h"
+  "Eval_Define.h" -> "DataNode.h"
+  "Eval_Define.h" -> "Evaluator.h"
+  "Eval_Define.h" -> "EvaluatorStrategyDefinitions.h"
+  "Eval_Define.h" -> "Eval_Expression.h"
+  "IEnvironment.h" -> "memory"
+"utility" [color="red",font="fixed"]
+  "IEnvironment.h" -> "utility"
+  "IEnvironment.h" -> "vector"
+  "Value.h" -> "Integer.h"
+  "Value.h" -> "Real.h"
+  "Value.h" -> "typeinfo"
+  "Value.h" -> "boost/variant.hpp"
+"cassert" [color="red",font="fixed"]
+  "Value.h" -> "cassert"
+  "Evaluator.h" -> "memory"
+  "Evaluator.h" -> "Environment.h"
+  "Evaluator.h" -> "DataNode.h"
+  "Evaluator.h" -> "IEvaluatorStrategy.h"
+  "Real.h" -> "Complex.h"
+  "Real.h" -> "cmath"
+  "Complex.h" -> "cmath"
+  "DataNode.h" -> "vector"
+  "DataNode.h" -> "boost/variant.hpp"
+  "DataNode.h" -> "IDataNode.h"
+  "DataNode.h" -> "Data.h"
+  "Eval_Define_impl.h" -> "type_traits"
+  "Eval_Define_impl.h" -> "IEvaluatorStrategy.h"
+  "Eval_Define_impl.h" -> "IEnvironment.h"
+  "Eval_Define_impl.h" -> "Symbol.h"
+  "Eval_Define_impl.h" -> "DataNode.h"
+  "Eval_Define_impl.h" -> "Evaluator.h"
+  "Eval_Define_impl.h" -> "EvaluatorStrategyDefinitions.h"
+  "Eval_Define_impl.h" -> "Eval_Define.h"
+  "Eval_Define_impl.h" -> "Eval_Expression.h"
+  "Eval_Define_impl.h" -> "Eval_Expression_impl.h"
+  
+  subgraph cluster_Boost{
+    "boost/variant/get.hpp"
+    "boost/flyweight.hpp"
+    "boost/variant.hpp"
+  }
+}

@@ -36,7 +36,7 @@ argparser.add_argument(
 
 # --file will select a non-default configuration file to select
 argparser.add_argument(
-    "-f", "--file",
+    "-c", "--config",
     default="./config.cinclude2dot2",
     help="The configuration file to run (default: config.cinclude2dot)"
 )
@@ -107,11 +107,11 @@ printout(args)
 
 # Read in the configuration file as JSON
 try:
-    config_file = open(args.file)
+    config_file = open(args.config)
     config = json.load(config_file)
     config_file.close()
 except IOError:
-    printout(sys.argv[0] + ": Could not open configuration file: " + args.file, file=sys.stderr)
+    printout(sys.argv[0] + ": Could not open configuration file: " + args.config, file=sys.stderr)
     exit()
 
 # Pretty print the JSON
@@ -237,7 +237,7 @@ def parse_files_and_emit_edges(info, log, source_files):
                     filter_filename = filter_filename.replace('>', '')
                     # Process filters for the current filename.
                     process_cluster_filters(info, log, filter_filename)
-                    process_node_filters(info, log, current_filename)
+                    process_node_filters(info, log, filter_filename)
                     # Write the current edge.
                     if (not args.reverse_edge_dir):
                         emit_str(
@@ -270,6 +270,7 @@ def log_node(log, name, tree):
         property_string = property_string[0:-1]
         emit_str(log, '\"' + name + '\" [' + property_string + ']\n')
 
+
 # Attach a regex filter according to a node.
 def config_node(info, config_tree):
     regex = config_tree['regex']
@@ -297,10 +298,10 @@ def emit_output(info, log, config_tree):
             pair == "edge"):
             emit_property(info, config_tree[pair], pair)
         # If it's a $cluster filter, read in the info
-        elif (pair == "$cluster"):
+        elif (pair.startswith("$cluster_")):
             config_cluster(info, config_tree[pair])
         # If it's a $node filter, read in the info
-        elif (pair == "$node"):
+        elif (pair.startswith("$node_")):
             config_node(info, config_tree[pair])
         # Otherwise, let's see what it is.
         else:

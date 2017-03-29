@@ -7,12 +7,19 @@
 
     "$cluster" : {
         "name" : "Boost",
-        "regex" : "boost/.*"
+        "regex" : "boost/.*",
+        "color" : "green"
     },
 
-    "$node" : {
+    "$node_std" : {
+        "regex" : "(.*?)(?<!(\\.h))$",
+        "color" : "red",
+        "font"  : "fixed"
+    },
+
+    "$node_Eval" : {
         "regex" : "Eval.*\\.h",
         "color" : "blue",
-        "font" : "fixed"
+        "font"  : "fixed"
     }
 }
