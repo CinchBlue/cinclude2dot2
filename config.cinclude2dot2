@@ -1,14 +1,10 @@
 {
-    "node" : {
-        "shape": "square"
-    },
-
     "rankdir": "TB",
 
-    "$cluster" : {
+    "$cluster_boost" : {
         "name" : "Boost",
         "regex" : "boost/.*",
-        "color" : "green"
+        "color" : "orange"
     },
 
     "$node_std" : {
@@ -21,5 +17,11 @@
         "regex" : "Eval.*\\.h",
         "color" : "blue",
         "font"  : "fixed"
+    },
+
+    "$node_stdexcept" : {
+        "regex" : "stdexcept",
+        "color" : "green",
+        "font" : "fixed"
     }
 }
