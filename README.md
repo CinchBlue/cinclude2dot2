@@ -66,3 +66,5 @@ These cluster filenames that match the regex into a node cluster.
 
 This command will apply a style to nodes that match the regex.
 Tags besides "regex" will be applied.
+
+# This project is frozen (since August 31, 2018) due to inactivity. Please fork if you wish to take ownership.
