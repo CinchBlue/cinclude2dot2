@@ -1,7 +1,7 @@
 # cinclude2dot2 - C/C++ dependency graph generator Python script
 
 `cinclude2dot2` is intended to be an original, clean-house, remaking and 
-"remastering" of the Perl-based (cinclude2dot)[https://www.flourish.org/cinclude2dot/] tool. 
+"remastering" of the Perl-based [cinclude2dot](https://www.flourish.org/cinclude2dot/) tool. 
 
 Using `cinclude2dot` requires using Python. This script was developed using
 Python 2.7 and 3.3, and should be compatible with both.
